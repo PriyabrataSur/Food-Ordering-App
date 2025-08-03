@@ -20,10 +20,12 @@ header {
     padding: 20px;
     background-color: #e23744;
     color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo img {
-    height: 50px;
+    height: 40px;
+    width: auto;
 }
 
 header ul {
@@ -44,42 +46,7 @@ header ul li a {
 
 header ul li a:hover {
     color: #ffd700;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #e23744;
-    color: white;
-}
-
-.logo img {
-    height: 30px;  /* Reduced size */
-    width: auto;   /* Maintain aspect ratio */
-}
-
-header ul {
-    display: flex;
-    list-style: none;
-}
-
-header ul li {
-    margin-left: 20px;
-}
-
-header ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-header ul li a:hover {
-    /* color: rgb(174, 255, 0); */
-    font-size: large;
+    transform: scale(1.05);
 }
 
 /* Main Section */
@@ -96,7 +63,7 @@ main section {
 
 /* First Section (hero section) */
 main section:first-of-type {
-    background: url('/Project1/img/bgzomato.png') no-repeat center center/cover;
+    background: url('../img/bgzomato.png') no-repeat center center/cover;
     color: white;
     min-height: 60vh;
     display: flex;
@@ -116,12 +83,22 @@ main section:first-of-type p {
 
 main section:first-of-type input {
     margin-top: 20px;
-    padding: 10px;
-    width: 300px;
+    padding: 15px;
+    width: 400px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 16px;
     outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+main section:first-of-type input:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+main section:first-of-type input::placeholder {
+    color: #666;
 }
 
 /* Second Section (Food Delivery Info) */
@@ -156,6 +133,12 @@ main section:nth-of-type(2) p {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .feature h3 {
